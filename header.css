@@ -1,0 +1,265 @@
+
+.tanmay_nav_new {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5%;
+    /* padding-right:5%; */
+}
+
+.tanmay_nav_new .left-nav {
+    float: left;
+}
+
+/*.tanmay_nav_new .right-nav {
+    float: left;
+    float: right;
+}*/
+
+.clear {
+    clear: both;
+}
+
+.tanmay_nav_new .left-nav img {
+    height: 70px;
+    width: 70px;
+}
+.tanmay_nav_new .right-nav .menu-item a {
+    text-decoration: none;
+    color: #fff;
+    border: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.tanmay_nav_new .right-nav .menu-item .app {
+    background: teal;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /*padding-left: 15px;*/
+    /* padding-right:15px; */
+    border-radius: 12px;
+    color: white;
+}
+
+.tanmay_nav_new .right-nav .active a {
+    background: linear-gradient(97.13deg, #9CBAF7 2.78%, #9010B0 97.22%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /*text-decoration: underline;*/
+    position: relative;
+    border-bottom: 3px solid rgb(88, 4, 166);
+    border-radius: 3px;
+    opacity: 1 !important;
+}
+
+/* MOBILE SECTION */
+@media(max-width:992px) {
+    .tanmay_nav_new {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .tanmay_nav_new .left-nav img {
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+        text-align: center;
+        display: grid;
+        align-items: center;
+    }
+
+    .tanmay_nav_new .n-small {
+        display: none;
+    }
+
+    .tanmay_nav_new .left-nav {
+        width: 70%;
+    }
+
+    .tanmay_nav_new .right-nav {
+        width: 30%;
+        justify-content: center;
+        text-align: center;
+        font-size: 12px;
+        display: grid;
+        align-items: center;
+        height: 30px;
+    }
+}
+
+/* Website section */
+@media(min-width:993px) {
+    .tanmay_nav_new .n-large {
+        display: none;
+    }
+
+    .tanmay_nav_new .left-nav {
+        width: 10%;
+    }
+
+    .tanmay_nav_new .right-nav {
+        width: 90%;
+    }
+
+    .tanmay_nav_new .right-nav .menu-item {
+        width: 11%;
+        /*text-align: center;*/
+        padding-left: 0.5%;
+        /* padding-right:0.5%; */
+        justify-content: center;
+        text-align: center;
+        font-size: 15px;
+        height: 70px;
+        display: grid;
+        align-items: center;
+        /*changed left to right */
+        float: right;
+        text-transform: uppercase;
+    }
+}
+
+/* THE MOBILE NAV MENU */
+.nav-tanmay-mobile-menu {
+    padding-top: 30%;
+    height: 100vh;
+    width: 0%;
+    position: fixed;
+    /* Stay in place */
+    right: 0;
+    top: 0;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: changebg 15s ease infinite;
+    animation-name: changebg;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    /*background-color: #063970; /* Black fallback color */
+    /*background-color: #063970; /* Black w/opacity */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in or slide down the nav-tanmay-mobile-menu (height or width, depending on reveal) */
+    z-index: 2;
+    position: fixed;
+}
+
+.nav-tanmay-mobile-menu-content {
+    z-index: 1;
+    top: 15%;
+    position: relative;
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 10px;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the nav-tanmay-mobile-menu */
+.nav-tanmay-mobile-menu a {
+    /*padding: 8px;*/
+    /*text-decoration: none;*/
+    /*font-size: 25px;*/
+    /*color: white;*/
+    /*display: block; */
+    /*transition: 0.3s;*/
+    display: block;
+    text-align: center;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 70%;
+    color: white;
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+}
+
+.nav-tanmay-mobile-menu center a {
+    border-radius: 13px;
+    width: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-tanmay-mobile-menu center a:hover {
+    border-radius: 13px;
+    width: 270px;
+    background: #063965;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-tanmay-mobile-menu i {
+    font-size: 32px;
+    color: white
+}
+
+/* When you mouse over the navigation links, change their color */
+.nav-tanmay-mobile-menu a:hover,
+.nav-tanmay-mobile-menu a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.nav-tanmay-mobile-menu .closebtn {
+    position: absolute;
+    top: 10px;
+    right: -200px;
+    font-size: 60px;
+    color: white;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 560px) {
+    .nav-tanmay-mobile-menu a {
+        font-size: 20px
+    }
+
+    .nav-tanmay-mobile-menu .closebtn {
+        font-size: 60px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@keyframes changebg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.login-button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+    background: rgb(83, 0, 255);
+    background: linear-gradient(90deg, rgba(83, 0, 255, 1) 0%, rgba(231, 172, 204, 1) 100%);
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+
+.xx {
+    position: relative;
+}
+
+.button-xx {
+    position: absolute;
+    top: -100px;
+    right: 25px;
+}
+
+.top-right-button {
+    color: black;
+    padding: 15px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}

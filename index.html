@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SciAstra - Teams</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="header.css">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bs-body-bg);
+            width: 100%;
+            height: 100%;
+        }
+
+
+        #title {
+            margin: 3.5rem;
+        }
+
+        #title span {
+            font-weight: 600;
+            background: linear-gradient(360deg, #234EB0 5%, #9010B0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2rem;
+            line-height: 2.3rem;
+        }
+    </style>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .tanmay_nav_new {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .tanmay_nav_new .right-nav .menu-item a {
+            color: #000;
+        }
+
+        .sub-text {
+            font-size: 14px;
+        }
+
+        .imageDiv {
+            display: grid;
+            place-items: center;
+            gap: 12px;
+
+        }
+
+        .imageDiv img {
+            clip-path: circle(50% at 50% 50%);
+
+        }
+    </style>
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .main {
+            display: grid;
+            place-items: center;
+            width: 100%;
+            /* height: 100vh; */
+        }
+
+        .wrappers {
+            max-width: 1000px;
+            width: 100%;
+            position: relative;
+            user-select: none;
+        }
+
+        .cards {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-radius: 50%;
+
+            /* Image */
+            background-size: 75%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .carousels {
+            /* Responsible for row with continuous elements */
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: calc((100% / 5) + 2px);
+            /* gap: 16px; */
+            overflow-x: auto;
+            place-items: center;
+
+            /* Optional */
+            scroll-snap-type: x mandatory;
+            scrollbar-width: 0;
+            padding: 0;
+
+            list-style: none;
+            padding: 2rem 0;
+            margin: 0;
+
+            /* background-color: blue; */
+
+            scroll-behavior: smooth;
+            transition: scroll 1.5s ease-in-out;
+
+        }
+
+        .carousels::-webkit-scrollbar {
+            display: none;
+        }
+
+        .wrappers i {
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            font-size: 1.25rem;
+            z-index: 1;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+            top: 45%;
+            transform: translateY(-50%);
+        }
+
+        .wrappers i:first-child {
+            left: -60px;
+        }
+
+        .wrappers i:last-child {
+            right: -60px;
+        }
+
+        .carousels div {
+            display: grid;
+            place-items: center;
+            gap: 16px;
+        }
+
+        .carousels div span {
+            font-size: 11px;
+        }
+
+        @media screen and (max-width:1200px) {
+            .carousels {
+                grid-auto-columns: calc((100% / 4) - 2px);
+            }
+
+            .wrappers {
+                max-width: 900px;
+            }
+        }
+
+        @media screen and (max-width:1000px) {
+            .carousels {
+                grid-auto-columns: calc((100% / 3) - 2px);
+            }
+
+            .wrappers {
+                max-width: 700px;
+            }
+        }
+
+        @media screen and (max-width:800px) {
+            .carousels {
+                grid-auto-columns: calc((100% / 2) - 2px);
+            }
+
+            .wrappers {
+                max-width: 500px;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .carousels {
+                grid-auto-columns: 100%;
+            }
+
+            .wrappers {
+                max-width: 300px;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            .carousels {
+                grid-auto-columns: 100%;
+            }
+
+            .wrappers {
+                max-width: 150px;
+            }
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="tanmay_nav_new">
+            <div class="left-nav">
+                <a href="https://sciastra.com">
+                    <img style="border-radius:50%;" src="https://www.sciastra.com/Assets/Images/newsciastra.jpg"
+                        alt="SciAstra Logo" />
+                </a>
+            </div>
+            <div class="right-nav">
+                <div class="n-small">
+                    <div class="menu-item">
+                        <a class="login-button s-tx-white lra" href="https://sciastra.com/app/">Login</a>
+                    </div>
+                    <div class="menu-item
+                    ">
+                        <a class="lra" href="https://www.sciastra.com/contact">Contact us</a>
+                    </div>
+                    <!--<div class="menu-item-->
+                    <!--">-->
+                    <!--    <a class="lra" href="https://www.sciastra.com/tss-niser">TSS </a>-->
+                    <!--</div>-->
+                    <div class="menu-item
+                     active">
+                        <a class="lra" href="https://www.sciastra.com/teams/">Team</a>
+                    </div>
+                    <div class="menu-item
+                    ">
+                        <a class="lra" href="https://www.sciastra.com/materials">Materials</a>
+                    </div>
+                    <div class="menu-item
+                    ">
+                        <a class="lra" href="https://www.sciastra.com/blog/">Blogs</a>
+                    </div>
+                    <div class="menu-item
+                    ">
+                        <a class="lra" href="https://www.sciastra.com/selections">Selections</a>
+                    </div>
+                    <div class="menu-item
+                    ">
+                        <a class="lra" href="https://www.sciastra.com/courses/">Courses</a>
+                    </div>
+                    <div class="menu-item
+                    ">
+                        <a class="lra" href="https://sciastra.com/">Home</a>
+                    </div>
+
+                </div>
+
+
+
+                <div class="upx n-large">
+                    <button class="upxb " onclick="openNavtanmay()" id="openmenubtn">
+                    </button>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </nav>
+    </header>
+    <div class="main">
+
+        <div style="display: flex; flex-direction: column; align-items: center;" id="title">
+            <span>Learn from Scientists, research scholors from </span>
+            <span> the top institutes in the world.</span>
+        </div>
+
+
+
+        <div class="wrappers" id="wrappers1">
+            <i class="fa-solid fa-angle-left" id="left"></i>
+
+            <ul class="carousels">
+                <div>
+                    <li class="cards"
+                        style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c3/Coat_of_Arms_of_the_University_of_Cambridge.svg'); background-size: 65%;">
+                    </li>
+                    <span>Cambridge University</span>
+                </div>
+                <div>
+                    <li class="cards" style="background-image: url('harvard-university.png');"></li>
+                    <span>Hardvard University</span>
+                </div>
+                <div>
+                    <li class="cards"
+                        style="background-image: url('University_of_California.png'); background-size: 170%;"></li>
+                    <span>University of California</span>
+                </div>
+                <div>
+                    <li class="cards" style="background-image: url('eth.png'); background-size: 100%;"></li>
+                    <span>ETH Zurich</span>
+                </div>
+                <div>
+                    <li class="cards" style="background-image: url('maxplanks.png'); background-size: 90%;"></li>
+                    <span>Max PLacks</span>
+                </div>
+                <div>
+                    <li class="cards"
+                        style="background-image: url('https://upload.wikimedia.org/wikipedia/en/7/7a/University_of_Edinburgh_ceremonial_roundel.svg'); background-size: 85%;">
+                    </li>
+                    <span>University of Edinberg</span>
+                </div>
+                <div>
+                    <li class="cards" style="background-image: url('john-hopkins.jpg'); background-size: 101%;">
+                    </li>
+                    <span>John's Hopkins</span>
+                </div>
+                <div>
+                    <li class="cards"
+                        style="background-image: url('https://i0.wp.com/iisma.kemdikbud.go.id/info/wp-content/uploads/2022/02/Michigan-State-University-1.png?fit=300%2C300&ssl=1'); background-size: 120%;">
+                    </li>
+                    <span>Michigan State</span>
+                </div>
+                <div>
+                    <li class="cards" style="background-image: url('illonois.png'); background-size: 100%;"></li>
+                    <span>University of Illionois</span>
+                </div>
+                <div>
+                    <li class="cards"
+                        style="background-image: url('Humboldt-University-of-Berlin.png'); background-size: 100%;">
+                    </li>
+                    <span>Humboldt University Berlin</span>
+                </div>
+
+            </ul>
+
+            <i class="fa-solid fa-angle-right" id="right"></i>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        // var arrowButtons1 = document.querySelectorAll('.carousels i');
+        // var carousel1 = document.querySelector('.carousels');
+        // const cardsWidth1 = document.querySelector('.cards').offsetWidth;
+
+        // arrowButtons1.forEach(btn => {
+        //     btn.addEventListener('click', () => {
+        //         // console.log(btn.id, cardsWidth1 * 2);
+        //         carousel1.scrollLeft += btn.id === "left" ? -cardsWidth1 * 2 : cardsWidth1 * 2
+        //     });
+        // });
+
+
+
+        const arrowButtons1 = document.querySelectorAll('.wrappers i')
+
+        arrowButtons1.forEach(btn => {
+            btn.addEventListener('click', () => {
+                console.log(btn.previousSibling())
+                
+                 
+            })
+        })
+
+
+    </script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
